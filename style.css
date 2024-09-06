@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #121212;
+    color: #e0e0e0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 500px;
+    background: #1f1f1f; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(233, 141, 245, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7); 
+    animation: rgb-glow 1.5s infinite alternate;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #e0e0e0; 
+}
+
+.todo-app h2 img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    background: #333333;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffffff; 
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    font-size: 16px;
+    padding: 12px 50px 12px 40px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+ul li:hover {
+    background: #ffffff; 
+    color: #121212
+}
+
+ul li.checked {
+    color: #888888;
+    text-decoration: line-through;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: url('img/uncheck.png') no-repeat center;
+    background-size: 14px;
+    top: 50%;
+    left: 10px; 
+    transform: translateY(-50%);
+}
+
+ul li.checked::before {
+    background: url('img/check.png') no-repeat center;
+    background-size: 14px;
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    color: #888888;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background: #333333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+ul li span:hover {
+    background: #444444;
+}
+
+/* Stopwatch Styles */
+.stopwatch {
+    width: 100%;
+    max-width: 300px;
+    background: #1f1f1f; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(255, 177, 255, 0.7); 
+    padding: 20px;
+    text-align: center;
+    transition: max-width 0.3s ease;
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    animation: rgb-glow 1.5s infinite alternate;
+}
+
+.stopwatch.expanded {
+    max-width: 400px;
+}
+
+.stopwatch h1 {
+    font-size: 36px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.buttonss {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.buttonss img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+    margin: 0 10px;
+}
+
+
+.buttonss img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.7); 
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); 
+}
+ ul li:hover{
+    border: 2px solid rgba(255, 255, 255, 0.7); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+ }
+@keyframes rgb-glow {
+    100% {
+        box-shadow:  0 0 10px rgba(255, 255, 255, 0.7);
+    }
+}
