@@ -120,7 +120,7 @@ ul li::before {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background: url('img/uncheck.png') no-repeat center;
+    background: url('uncheck.png') no-repeat center;
     background-size: 14px;
     top: 50%;
     left: 10px; 
@@ -128,7 +128,7 @@ ul li::before {
 }
 
 ul li.checked::before {
-    background: url('img/check.png') no-repeat center;
+    background: url('check.png') no-repeat center;
     background-size: 14px;
 }
 
