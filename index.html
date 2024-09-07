@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="img/goku-ultra-instinct_2.3840x2160.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 <div class="container">
     <div class="todo-app">
-        <h2 class="h2">To-Do List<img src="pen.png"></h2>
+        <h2 class="h2">To-Do List<img src="img/pen.png"></h2>
         <div class="row">
             <input type="Text" id="input-box" placeholder="add your text">
             <button onclick="addTask()">Add</button>
@@ -24,9 +28,9 @@
 <div class="stopwatch">
     <h1 id="displayTime">00:00:00</h1>
     <div class="buttonss">
-        <img src="play.png" onclick="watchStop()">
-        <img src="stop.png" onclick="watchStart()">
-        <img src="replay.png" onclick="watchReset()">
+        <img src="img/play.png" onclick="watchStop()">
+        <img src="img/stop.png" onclick="watchStart()">
+        <img src="img/replay.png" onclick="watchReset()">
     </div>
     <ul id="Tasks">
     </ul>
