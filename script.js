@@ -2,6 +2,12 @@ let inputBox = document.getElementById("input-box");
 let listContainer = document.getElementById("list-container");
 let tasksBelowTimer = document.getElementById("Tasks");
 
+inputBox.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") { // Check if the Enter key was pressed
+        addTask(); // Call addTask function when Enter is pressed
+    }
+});
+
 function addTask() {
     if (inputBox.value === '') {
         alert("You must write something!");
